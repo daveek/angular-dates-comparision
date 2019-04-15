@@ -46,12 +46,16 @@ export class DatepickerValueExample {
     if (d1 < d2) {
       console.warn('D2 > D1');
       console.log('D2: ' + d2);
-      this.stringyDate = '"2019-11-06T23:00:00.000+01:00"';
+      this.stringyDate = "2019-04-15T12:30:21.840+02:00";
       console.info('D-BMS.stringy: ' + this.stringyDate);
+      /*
       this.parseDate = JSON.parse(this.stringyDate);
       console.info('D-BMS.parse: ' + this.parseDate);
       this.dateDave = new Date(this.parseDate);
       console.log('Dave-BMS D: ' + this.dateDave);
+      */
+      let FinalDate = new Date(this.stringyDate);
+      console.warn(`Final Date: ${FinalDate}`);
       this.result = -1;
       return;
     }
